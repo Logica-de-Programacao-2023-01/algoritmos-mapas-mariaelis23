@@ -1,0 +1,268 @@
+q1
+
+func countWords(text string) map[string]int {
+	words := strings.Fields(text)
+	wordCount := make(map[string]int)
+
+	for _, word := range words {
+		wordCount[word]++
+	}
+
+	return wordCount
+
+
+q2
+
+func mergeMaps(map1, map2 map[string]int) map[string]int {
+	merged := make(map[string]int)
+
+	for key, value := range map1 {
+		merged[key] = value
+	}
+
+	for key, value := range map2 {
+		merged[key] = value
+	}
+
+	return merged
+
+
+q3
+func sumValues(m map[string]int) int {
+	sum := 0
+
+	for _, value := range m {
+		sum += value
+	}
+
+	return sum
+}
+
+
+q4
+
+func areAnagrams(word1, word2 string) bool {
+	if len(word1) != len(word2) {
+		return false
+	}
+
+	word1Chars := strings.Split(word1, "")
+	word2Chars := strings.Split(word2, "")
+
+	sort.Strings(word1Chars)
+	sort.Strings(word2Chars)
+
+	for i := range word1Chars {
+		if word1Chars[i] != word2Chars[i] {
+			return false
+		}
+	}
+
+	return true
+
+
+q5
+
+
+func countCharacterFrequency(text string) map[string]int {
+	charFrequency := make(map[string]int)
+
+	for _, char := range text {
+		charFrequency[string(char)]++
+	}
+
+	return charFrequency
+}
+
+
+q6
+func sumWordCounts(wordCounts []map[string]int) map[string]int {
+	totalCounts := 
+	totalCounts
+
+	total
+make(map[string]int)
+
+	
+
+for _, countMap := range wordCounts {
+		for word, count := range countMap {
+			totalCounts[word] += count
+		}
+	}
+
+	
+			totalCounts[word] += count
+		}
+	}
+
+
+			totalCounts[word] += count
+		}
+
+			totalCounts[word] += count
+	
+
+			totalCounts[word] +=
+
+			totalCounts
+
+			total
+
+		
+return totalCounts
+}
+
+
+q7
+func countLetterFrequencyPerWord(phrase string) map[string]map[string]int {
+	wordFrequency := make(map[string]map[string]int)
+
+	words := strings.Fields(phrase)
+	
+
+	words := strings.Fields(phrase
+
+
+	words := strings.Fields(
+
+
+	words := strings
+
+
+	words
+for _, word := range words {
+		letterFrequency := 
+		letter
+make(map[string]int)
+
+		
+
+for _, letter := range word {
+			letterFrequency[
+			letter
+
+		
+string(letter)]++
+		}
+
+		wordFrequency[word] = letterFrequency
+	}
+
+	
+		}
+
+		wordFrequency[word] = letterFrequency
+	
+
+		}
+
+		wordFrequency[word] = letter
+
+		}
+
+		wordFrequency[word]
+
+		}
+
+		word
+
+		}
+
+return wordFrequency
+}
+
+
+
+
+q8
+
+func calculateExpenseShare(expenses map[string]float64) map[string]float64 {
+	totalExpense := 0.0
+	for _, expense := range expenses {
+		totalExpense += expense
+	}
+
+	averageExpense := totalExpense / 
+		totalExpense += expense
+	}
+
+	averageExpense := total
+
+		totalExpense += expense
+	}
+
+	averageExpense :=
+
+		totalExpense += expense
+	}
+
+	
+
+		totalExpense += expense
+	}
+
+
+		totalExpense += expense
+	
+
+	
+float64(len(expenses))
+
+	expenseShare := 
+
+	exp
+
+
+make(map[string]float64)
+	for person, expense := range expenses {
+		expenseShare[person] = averageExpense - expense
+	}
+
+	
+		expenseShare[person] = averageExpense - expense
+	
+
+		expense
+
+	
+return expenseShare
+}
+
+
+
+
+q10
+
+func countPairFrequency(numbers []int) map[[2]int]int {
+	pairFrequency := make(map[[2]int]int)
+
+	for i := 0; i < len(numbers)-1; i++ {
+		
+	
+for j := i + 1; j < len(numbers); j++ {
+			pair := [
+			pair :=
+
+			pair
+
+		
+2]int{numbers[i], numbers[j]}
+			pairFrequency[pair]++
+		}
+	}
+
+	
+			pairFrequency[pair]++
+		}
+	
+
+			pairFrequency[pair]++
+		
+
+			pairFrequency[pair]++
+	
+
+		
+return pairFrequency
+}
